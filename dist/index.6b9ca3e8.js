@@ -456,7 +456,8 @@ function hmrAcceptRun(bundle, id) {
 
 },{}],"hTXjU":[function(require,module,exports) {
 var _socketIoClient = require("socket.io-client");
-const socket = _socketIoClient.io("http://localhost:3000");
+const PORT = 3000;
+const socket = _socketIoClient.io("http://localhost:" + PORT);
 const chatInput = document.querySelector(".chat-input");
 const chatBtn = document.querySelector(".chat-btn");
 const messages = document.querySelector(".messages");
