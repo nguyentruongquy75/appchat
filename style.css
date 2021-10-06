@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --color-white: #fff;
+  --color-blue: #0084ff;
+  --color-grey: #e4e6eb;
+  --color-grey-light: #f0f2f5;
+  --color-text: #333;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.6rem;
+  background-color: aquamarine;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.mt-4 {
+  margin-top: 0.4rem;
+}
+
+.mt-12 {
+  margin-top: 1.2rem;
+}
+
+.chat {
+  width: 40rem;
+  height: 50rem;
+  border-radius: 1.6rem;
+  background-color: var(--color-white);
+  overflow: hidden;
+  position: relative;
+}
+
+.chat__name {
+  font-size: 1.8rem;
+  color: var(--color-text);
+  padding: 1.6rem;
+  text-align: center;
+  border-bottom: 1px solid #eee;
+}
+
+.messages {
+  padding: 1.2rem;
+  max-height: 40rem;
+  overflow-y: scroll;
+}
+
+.messages::-webkit-scrollbar {
+  display: none;
+}
+
+.message__author {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #aaa;
+  display: block;
+  margin-bottom: 0.2rem;
+  margin-left: 0.6rem;
+}
+
+.message__content {
+  display: inline-block;
+  max-width: 70%;
+  word-wrap: break-word;
+  padding: 1.2rem 0.8rem;
+  border-radius: 1.6rem;
+}
+
+.message__item.message__item--friend .message__content {
+  background-color: var(--color-grey);
+}
+
+.message__item.message__item--me {
+  text-align: right;
+}
+
+.message__item.message__item--me .message__content {
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  text-align: left;
+}
+
+.chat__bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.6rem 0;
+}
+
+.chat-input {
+  flex-basis: 80%;
+  height: 4rem;
+  border-radius: 2rem;
+  background-color: var(--color-grey-light);
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  padding: 0 1.2rem;
+}
+
+.chat-btn {
+  margin-left: 1rem;
+  font-size: 1.8rem;
+  transform: rotate(60deg);
+  padding: 1.2rem;
+  cursor: pointer;
+}
+
+.message__item--me + .message__item--me {
+  margin-top: 0.4rem;
+}
