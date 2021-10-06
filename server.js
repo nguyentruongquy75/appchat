@@ -11,3 +11,5 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("message-server", message, socket.id, username);
   });
 });
+
+io.listen(PORT);
