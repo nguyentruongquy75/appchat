@@ -1,4 +1,4 @@
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 3000;
 
 const io = require("socket.io")(PORT, {
   cors: {
@@ -11,3 +11,5 @@ io.on("connection", (socket) => {
     socket.broadcast.emit("message-server", message, socket.id, username);
   });
 });
+
+io.listen(PORT);
