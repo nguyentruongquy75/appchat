@@ -1,7 +1,7 @@
 import { io } from "socket.io-client";
 
 const PORT = process.env.PORT || 5000;
-const socket = io("http://localhost:" + PORT);
+const socket = io("https://app-chat12.herokuapp.com/");
 const chatInput = document.querySelector(".chat-input");
 const chatBtn = document.querySelector(".chat-btn");
 const messages = document.querySelector(".messages");

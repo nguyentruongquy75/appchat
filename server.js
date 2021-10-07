@@ -1,10 +1,6 @@
 const PORT = process.env.PORT || 3000;
 
-const io = require("socket.io")(PORT, {
-  cors: {
-    origin: ["http://localhost:" + PORT],
-  },
-});
+const io = require("socket.io")(PORT);
 
 io.on("connection", (socket) => {
   socket.on("message-client", (message, username) => {
